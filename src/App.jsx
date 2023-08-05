@@ -17,9 +17,7 @@ function App() {
   const fetchImages = useCallback(async () => {
     try {
       if(searchInput.current.value){
-        // const {data} = await axios.get(`${API_URL}?query=${searchInput.current.value}&page=${page}&per_page=${IMAGES_PER_PAGE}&client_id=${import.meta.env.VITE_API_KEY}`);
-        const {data} = await axios.get(`${API_URL}?query=${searchInput.current.value}&page=${page}&per_page=${IMAGES_PER_PAGE}&client_id=hsAIpXFSIL02lpTni1kWyufuz35ndKSXmhkUvvLEFvc`);
-        setImages(data.results);
+        const {data} = await axios.get(`${API_URL}?query=${searchInput.current.value}&page=${page}&per_page=${IMAGES_PER_PAGE}&client_id=${import.meta.env.VITE_API_KEY}`);
         setTotalPages(data.total_pages);
       }
     }catch (error) {
