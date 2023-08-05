@@ -18,6 +18,7 @@ function App() {
     try {
       if(searchInput.current.value){
         const {data} = await axios.get(`${API_URL}?query=${searchInput.current.value}&page=${page}&per_page=${IMAGES_PER_PAGE}&client_id=${import.meta.env.VITE_API_KEY}`);
+        setImages(data.results);
         setTotalPages(data.total_pages);
       }
     }catch (error) {
