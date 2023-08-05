@@ -26,10 +26,10 @@ body {
   margin-right: auto;
   display:flex;
   justify-content: center;
+
   flex-direction: column;
   min-height: 100vh;
 }
-
 
 .buttons {
   display: flex;
@@ -43,7 +43,7 @@ body {
 .buttons .btn,
 .buttons .btn:active,
 .buttons .btn:focus {
-  background-color: var(--primary-color);
+  background-color:#2a2b29 ;
   box-shadow: none;
   outline: none;
   border: none;
@@ -51,14 +51,18 @@ body {
 
 
 .search-section {
-  background-color: #7676d7;
+  background-color: #2a2b29;
   width: 96%;
   border-radius: 10px;
   height: 2.5rem;
   padding: 0 15px;
-  box-shadow: 0px 0px 8px #ddd;
+  box-shadow: 0px 0px 8px #e7e54cfd;
   display: flex;
   margin-top: 10px;
+  transition: 1.2s;
+}
+.search-section:hover{
+  box-shadow:0px 0px 8px #51f359; ;
 }
 input {
   background-color: transparent;
@@ -76,9 +80,10 @@ input:focus{
   outline: none;
 }
 #search-icon{
-  background-color: #7676d7;
+  background-color: #2a2b29;
   height: auto;
   margin-right: 10px;
+  color: #fff;
 }
 .filters {
   display: flex;
@@ -92,34 +97,39 @@ input:focus{
 
 .filters>* {
   padding: 5px 10px;
-  background: #7676d7;
+  background: #000000;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+  /* box-shadow: 5px 0px 8px rgb(214, 211, 35); */
 }
 
 .images {
+  
   margin-top: var(--medium-margin);
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
   grid-gap: 50px;
   justify-content: center;
   align-items: center;
+  
 }
+
 .images .image{
-  box-shadow: 10px 10px 20px 5px rgba(80, 79, 80, 0.1);
-  transition: transform 2s;
   width: 500px;
   height: 400px;
+  box-shadow: 0px 0px 8px #4e4e4d94;
+  transition: transform 2s;
 }
 
 .images .image:hover{
   transform:scaleX(1.1);
+  box-shadow: 0px 0px 8px #e7e54cfd;
 } 
 .image-alt {
   margin: 5px;
   margin-top:3px;
-  font-size: 14px;
+  font-size: 20px;
   color: #fffdfd;
   text-align: center;
 } 
