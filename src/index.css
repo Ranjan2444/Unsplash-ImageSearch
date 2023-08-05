@@ -116,7 +116,7 @@ input:focus{
 }
 
 .images .image{
-  width: 500px;
+  width: 400px;
   height: 400px;
   box-shadow: 0px 0px 8px #4e4e4d94;
   transition: transform 2s;

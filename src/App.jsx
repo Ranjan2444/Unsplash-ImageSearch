@@ -17,7 +17,7 @@ function App() {
   const fetchImages = useCallback(async () => {
     try {
       if(searchInput.current.value){
-        const {data} = await axios.get(`${API_URL}?query=${searchInput.current.value}&page=${page}&per_page=${IMAGES_PER_PAGE}&client_id=${import.meta.env.VITE_API_KEY}`);
+        const {data} = await axios.get(`${API_URL}?query=${searchInput.current.value}&page=${page}&per_page=${IMAGES_PER_PAGE}&client_id=hsAIpXFSIL02lpTni1kWyufuz35ndKSXmhkUvvLEFvc`);
         setImages(data.results);
         setTotalPages(data.total_pages);
       }
@@ -62,7 +62,7 @@ function App() {
       {
         images.map(image => (
           <div key={image.id} className="image-container">
-            <Card style={{ width: '22rem',height:'400px', border:'solid'}} className="image">
+            <Card style={{ width: '20rem',height:'400px', border:'solid'}} className="image">
           <CardImg style={{ width: '100%', height:'300px'}} variant="top" src={image.urls.small} alt ={image.alt_description} />
           <Card.Body>
           <Card.Text>
